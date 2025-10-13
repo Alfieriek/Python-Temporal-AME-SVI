@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-ame-svi"
+version = "0.1.0"
+description = "Structured Variational Inference for Temporal AME Network Models"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Sean Plummer", email = "seanp@uark.edu"}
+]
+keywords = ["network models", "variational inference", "temporal networks", "AME"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=1.10.0",
+    "numpy>=1.20.0",
+    "scipy>=1.6.0",
+    "matplotlib>=3.3.0",
+    "seaborn>=0.11.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0.0",
+    "black>=21.0",
+    "flake8>=3.9.0",
+    "mypy>=0.910",
+]
+notebook = [
+    "jupyter>=1.0.0",
+    "pandas>=1.2.0",
+]
+all = [
+    "pytest>=6.0.0",
+    "black>=21.0",
+    "flake8>=3.9.0",
+    "mypy>=0.910",
+    "jupyter>=1.0.0",
+    "pandas>=1.2.0",
+    "tqdm>=4.60.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/scplummer/temporal-ame-svi"
+Repository = "https://github.com/scplummer/temporal-ame-svi"
+Documentation = "https://github.com/scplummer/temporal-ame-svi/blob/main/README.md"
+Issues = "https://github.com/scplummer/temporal-ame-svi/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+namespaces = false
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
