@@ -14,19 +14,18 @@ Author: Sean Plummer
 Date: October 2025
 """
 
-import torch
 import matplotlib.pyplot as plt
 
 # Import models, inference, and utilities
-from src.models import TemporalAMEModel
-from src.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
-from src.utils import (
+from temporal_ame_svi.models import TemporalAMEModel
+from temporal_ame_svi.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
+from temporal_ame_svi.utils import (
     print_diagnostic_summary,
     compare_methods,
     align_temporal_states,
     compute_temporal_contributions
 )
-from src.visualization import (
+from temporal_ame_svi.visualization import (
     plot_convergence,
     plot_state_trajectories,
     plot_temporal_contributions,

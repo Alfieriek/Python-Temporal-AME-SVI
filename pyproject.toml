@@ -15,10 +15,7 @@ classifiers = [
 ]
 
 packages = [
-  { include = "models", from = "src" },
-  { include = "inference", from = "src" },
-  { include = "utils", from = "src" },
-  { include = "visualization", from = "src" }
+  { include = "temporal_ame_svi", from = "src" }
 ]
 
 dependencies = [
@@ -47,6 +44,7 @@ tqdm = ">=4.60.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=6.0.0"
+pytest-cov = ">=4.0.0"
 black = ">=21.0"
 flake8 = ">=3.9.0"
 mypy = ">=0.910"

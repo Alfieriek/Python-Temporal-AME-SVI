@@ -139,23 +139,24 @@ Shared fixtures in `conftest.py`:
 ```python
 import pytest
 import torch
-from src.models import YourModel
+from src.temporal_ame_svi.models import YourModel
+
 
 class TestYourFeature:
     """Tests for your feature."""
-    
+
     def test_basic_functionality(self):
         """Test basic functionality."""
         # Arrange
         model = YourModel(param=value)
-        
+
         # Act
         result = model.do_something()
-        
+
         # Assert
         assert result is not None
         assert result.shape == expected_shape
-    
+
     def test_edge_case(self):
         """Test edge case."""
         with pytest.raises(ValueError):

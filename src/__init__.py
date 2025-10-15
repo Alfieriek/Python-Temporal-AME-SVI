@@ -46,8 +46,8 @@ References: Hoff (2021), Statistical Science
 __version__ = '0.1.0'
 
 # Make key classes available at package level
-from .models import StaticAMEModel, TemporalAMEModel
-from .inference import (
+from src.temporal_ame_svi.models import StaticAMEModel, TemporalAMEModel
+from src.temporal_ame_svi.inference import (
     TemporalAMENaiveMFVI,
     TemporalAMEStructuredMFVI
 )

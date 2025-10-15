@@ -22,13 +22,11 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-import torch
 import numpy as np
 import matplotlib.pyplot as plt
 
-from src.models import TemporalAMEModel
-from src.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
-from src.utils import align_temporal_states
+from src.temporal_ame_svi.models import TemporalAMEModel
+from src.temporal_ame_svi.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
 from utils import (
     setup_experiment_dir,
     save_results,

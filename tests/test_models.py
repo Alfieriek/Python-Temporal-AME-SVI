@@ -8,11 +8,9 @@ Author: Sean Plummer
 Date: October 2025
 """
 
-import pytest
 import torch
-import numpy as np
 
-from src.models import BaseAMEModel, StaticAMEModel, TemporalAMEModel
+from temporal_ame_svi.models import StaticAMEModel, TemporalAMEModel
 
 
 class TestStaticAMEModel:

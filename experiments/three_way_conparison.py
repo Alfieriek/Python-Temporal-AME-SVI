@@ -21,17 +21,15 @@ Date: October 2025
 """
 
 import sys
-import os
 from pathlib import Path
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-import torch
 import matplotlib.pyplot as plt
 
-from src.models import TemporalAMEModel
-from src.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
+from src.temporal_ame_svi.models import TemporalAMEModel
+from src.temporal_ame_svi.inference import TemporalAMENaiveMFVI, TemporalAMEStructuredMFVI
 from src.utils import (
     print_diagnostic_summary,
     compare_methods,

@@ -11,9 +11,7 @@ import pytest
 import torch
 import numpy as np
 
-from src.inference import (
-    BaseVariationalInference,
-    BaseTemporalVariationalInference,
+from temporal_ame_svi.inference import (
     TemporalAMENaiveMFVI,
     TemporalAMEStructuredMFVI
 )

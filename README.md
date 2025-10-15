@@ -18,12 +18,16 @@ A Python implementation of temporal Additive and Multiplicative Effects (AME) mo
 ### Installation
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/scplummer/temporal-ame-svi.git
 cd temporal-ame
 
-# Install dependencies
-pip install -r requirements.txt
+# Set Python version using pyenv
+pyenv install 3.12.2  # or your preferred version
+pyenv local 3.12.2    # sets .python-version for this project
+
+# Install Poetry-managed environment
+poetry install --with dev,notebook --no-root
 ```
 
 ### Run Demo
@@ -83,7 +87,7 @@ temporal-ame/
 ### Generate Data
 
 ```python
-from src.models import TemporalAMEModel
+from src.temporal_ame_svi.models import TemporalAMEModel
 
 # Create model
 model = TemporalAMEModel(
@@ -100,7 +104,7 @@ Y, X_true = model.generate_data(return_latents=True)
 ### Fit Model with Structured VI
 
 ```python
-from src.inference import TemporalAMEStructuredMFVI
+from src.temporal_ame_svi.inference import TemporalAMEStructuredMFVI
 
 # Initialize inference
 vi = TemporalAMEStructuredMFVI(

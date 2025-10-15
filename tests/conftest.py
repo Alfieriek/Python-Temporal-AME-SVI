@@ -12,7 +12,7 @@ import pytest
 import torch
 import numpy as np
 
-from src.models import StaticAMEModel, TemporalAMEModel
+from temporal_ame_svi.models import StaticAMEModel, TemporalAMEModel
 
 
 @pytest.fixture

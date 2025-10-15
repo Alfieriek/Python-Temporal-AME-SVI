@@ -4,16 +4,12 @@ Complete guide to testing the temporal AME package.
 
 ## Installation
 
-First, install testing dependencies:
+
+
+Install all dependencies including tests:
 
 ```bash
-pip install pytest pytest-cov
-```
-
-Or install all dependencies including tests:
-
-```bash
-pip install -r requirements.txt
+poetry install --with dev --no-root
 ```
 
 ## Quick Start
@@ -22,7 +18,7 @@ pip install -r requirements.txt
 
 ```bash
 # From project root
-pytest
+poetry run pytest
 
 # Or use the provided script
 chmod +x run_tests.sh

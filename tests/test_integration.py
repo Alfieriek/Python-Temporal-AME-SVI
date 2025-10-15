@@ -20,32 +20,32 @@ import matplotlib.pyplot as plt
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
-from models.temporal_ame import TemporalAMEModel
-from models.static_ame import StaticAMEModel
-from inference.naive_mf import TemporalAMENaiveMFVI
-from inference.structured_mf import TemporalAMEStructuredMFVI
-from utils.alignment import (
+from temporal_ame_svi.models.temporal_ame import TemporalAMEModel
+from temporal_ame_svi.models.static_ame import StaticAMEModel
+from temporal_ame_svi.inference.naive_mf import TemporalAMENaiveMFVI
+from temporal_ame_svi.inference.structured_mf import TemporalAMEStructuredMFVI
+from temporal_ame_svi.utils.alignment import (
     align_temporal_states,
     compute_alignment_error,
     compute_correlation_after_alignment
 )
-from utils.diagnostics import (
+from temporal_ame_svi.utils.diagnostics import (
     compute_reconstruction_error,
     compute_temporal_contributions,
     print_diagnostic_summary,
     compare_methods
 )
-from utils.metrics import (
+from temporal_ame_svi.utils.metrics import (
     mean_squared_error,
     pearson_correlation,
     temporal_consistency_score
 )
-from visualization.temporal import (
+from temporal_ame_svi.visualization.temporal import (
     plot_state_trajectories,
     plot_trajectory_comparison,
     plot_temporal_contributions
 )
-from visualization.comparison import (
+from temporal_ame_svi.visualization.comparison import (
     plot_convergence_comparison,
     plot_method_comparison,
     plot_parameter_recovery_grid

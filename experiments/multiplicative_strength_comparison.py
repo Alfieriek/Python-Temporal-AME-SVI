@@ -10,7 +10,6 @@ Date: October 2025
 """
 
 import sys
-import os
 from pathlib import Path
 import time
 
@@ -23,9 +22,9 @@ from matplotlib.patches import Rectangle
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.models.temporal_ame import TemporalAMEModel
-from src.inference.naive_mf import TemporalAMENaiveMFVI
-from src.inference.structured_mf import TemporalAMEStructuredMFVI
+from src.temporal_ame_svi.models import TemporalAMEModel
+from src.temporal_ame_svi.inference.naive_mf import TemporalAMENaiveMFVI
+from src.temporal_ame_svi.inference.structured_mf import TemporalAMEStructuredMFVI
 from src.utils.alignment import compute_alignment_error
 from src.utils.diagnostics import (
     compute_temporal_contributions,
@@ -34,12 +33,7 @@ from src.utils.diagnostics import (
 )
 from src.visualization.comparison import (
     plot_convergence_comparison,
-    plot_method_comparison,
     plot_parameter_recovery_grid
-)
-from src.visualization.temporal import (
-    plot_temporal_contributions,
-    plot_trajectory_comparison
 )
 
 

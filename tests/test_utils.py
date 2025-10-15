@@ -11,7 +11,7 @@ import pytest
 import torch
 import numpy as np
 
-from src.utils import (
+from temporal_ame_svi.utils import (
     # Diagnostics
     compute_reconstruction_error,
     compute_additive_contribution,

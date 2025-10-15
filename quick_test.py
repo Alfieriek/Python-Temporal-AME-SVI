@@ -63,21 +63,21 @@ def main():
         
         # Test imports
         try:
-            from src.models import StaticAMEModel
+            from src.temporal_ame_svi.models import StaticAMEModel
             print("✓ Can import StaticAMEModel")
         except ImportError as e:
             print(f"✗ Cannot import StaticAMEModel: {e}")
             all_exist = False
         
         try:
-            from src.models import TemporalAMEModel
+            from src.temporal_ame_svi.models import TemporalAMEModel
             print("✓ Can import TemporalAMEModel")
         except ImportError as e:
             print(f"✗ Cannot import TemporalAMEModel: {e}")
             all_exist = False
         
         try:
-            from src.inference import TemporalAMENaiveMFVI
+            from src.temporal_ame_svi.inference import TemporalAMENaiveMFVI
             print("✓ Can import TemporalAMENaiveMFVI")
         except ImportError as e:
             print(f"✗ Cannot import TemporalAMENaiveMFVI: {e}")

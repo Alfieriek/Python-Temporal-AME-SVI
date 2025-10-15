@@ -14,7 +14,7 @@ import matplotlib
 matplotlib.use('Agg')  # Use non-interactive backend for testing
 import matplotlib.pyplot as plt
 
-from src.visualization import (
+from temporal_ame_svi.visualization import (
     # Static plots
     plot_convergence,
     plot_network,
