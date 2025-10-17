@@ -19,7 +19,7 @@ import torch
 import numpy as np
 from torch.distributions import MultivariateNormal
 
-from .static_ame import StaticAMEModel
+from    temporal_ame_svi.models.static_ame import StaticAMEModel
 
 
 class TemporalAMEModel(StaticAMEModel):
@@ -76,18 +76,18 @@ class TemporalAMEModel(StaticAMEModel):
         
     Examples
     --------
-    >>> model = TemporalAMEModel(
-    ...     n_nodes=15,
-    ...     n_time=10,
-    ...     latent_dim=2,
-    ...     ar_coefficient=0.8,
-    ...     seed=42
-    ... )
-    >>> Y = model.generate_data()
-    >>> print(Y.shape)  # (15, 15, 10, 2)
-    >>> 
-    >>> # Access latent trajectories
-    >>> X = model.X  # (15, 10, 6) where 6 = 2 + 2*2
+    # >>> model = TemporalAMEModel(
+    # ...     n_nodes=15,
+    # ...     n_time=10,
+    # ...     latent_dim=2,
+    # ...     ar_coefficient=0.8,
+    # ...     seed=42
+    # ... )
+    # >>> Y = model.generate_data()
+    # >>> print(Y.shape)  # (15, 15, 10, 2)
+    # >>>
+    # >>> # Access latent trajectories
+    # >>> X = model.X  # (15, 10, 6) where 6 = 2 + 2*2
     """
     
     def __init__(

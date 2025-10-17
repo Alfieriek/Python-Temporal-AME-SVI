@@ -177,9 +177,9 @@ class BaseAMEModel(ABC):
             
         Examples
         --------
-        >>> model = ConcreteAMEModel(n_nodes=10)
-        >>> # Create 2x2 block with corr=0.5, then 4x4 block with corr=0.3
-        >>> cov = model._block_diagonal_covariance([2, 4], [0.5, 0.3])
+        # >>> model = ConcreteAMEModel(n_nodes=10)
+        # >>> # Create 2x2 block with corr=0.5, then 4x4 block with corr=0.3
+        # >>> cov = model._block_diagonal_covariance([2, 4], [0.5, 0.3])
         """
         if variances is None:
             variances = [1.0] * len(block_sizes)

@@ -24,7 +24,7 @@ import torch
 import numpy as np
 from torch.distributions import MultivariateNormal
 
-from .base import BaseAMEModel
+from temporal_ame_svi.models.base import BaseAMEModel
 
 
 class StaticAMEModel(BaseAMEModel):
@@ -67,13 +67,13 @@ class StaticAMEModel(BaseAMEModel):
         
     Examples
     --------
-    >>> model = StaticAMEModel(n_nodes=20, latent_dim=2, seed=42)
-    >>> Y = model.generate_data()
-    >>> print(Y.shape)  # (20, 20, 2)
-    >>> 
-    >>> # Access generated parameters
-    >>> additive_effects = model.A  # (20, 2)
-    >>> latent_positions = model.M  # (20, 4)
+    # >>> model = StaticAMEModel(n_nodes=20, latent_dim=2, seed=42)
+    # >>> Y = model.generate_data()
+    # >>> print(Y.shape)  # (20, 20, 2)
+    # >>>
+    # >>> # Access generated parameters
+    # >>> additive_effects = model.A  # (20, 2)
+    # >>> latent_positions = model.M  # (20, 4)
     """
     
     def __init__(
